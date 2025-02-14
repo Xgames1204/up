@@ -89,7 +89,7 @@
 
         async function fetchScore() {
             try {
-                let response = await fetch("http://localhost:3000/score");
+                let response = await fetch("https://petion.vercel.app/score");
                 let data = await response.json();
                 score = data.score;
                 updateUI();
@@ -100,7 +100,7 @@
 
         async function increaseScore() {
             try {
-                let response = await fetch("http://localhost:3000/increment", { method: "POST" });
+                let response = await fetch("https://petion.vercel.app/increment", { method: "POST" });
                 let data = await response.json();
                 score = data.score;
                 updateUI();
